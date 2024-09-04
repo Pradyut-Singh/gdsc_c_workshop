@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main() {
     int seats[5][5];
-    int i, j;// Input the booking status for each seat
+    int i, j;
     printf("Enter the booking status for each seat (1 for booked, 0 for available):\n");
     for (i = 0; i < 5; i++) {
         for (j = 0; j < 5; j++) {
@@ -9,16 +9,16 @@ int main() {
             scanf("%d", &seats[i][j]);
         }
     }
-    printf("\nSeating Arrangement:\n");// Display the seating arrangement in tabular form
+    printf("\nSeating Arrangement:\n");
     printf("    1    2    3    4    5\n");
     printf("   -----------------------\n");
     for (i = 0; i < 5; i++) {
-        printf("%d |", i + 1); // Print row number
+        printf("%d |", i + 1);
         for (j = 0; j < 5; j++) {
             if (seats[i][j] == 1) {
-                printf(" [B] "); // [B] for Booked
+                printf(" [B] ");
             } else {
-                printf(" [A] "); // [A] for Available
+                printf(" [A] ");
             }
         }
         printf("\n");
